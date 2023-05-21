@@ -15,6 +15,8 @@ import { Root } from './pages/Root.jsx';
 import { ProdutoForm } from './produto/ProdutoForm.jsx';
 import { Footer } from './components/Footer.jsx';
 import { Login } from './components/Login.jsx';
+import { UsuarioForm } from './produto/UsuarioForm.jsx';
+import { ApiCep } from './produto/ApiCep.jsx';
 //import './index.css'
 
 
@@ -22,7 +24,8 @@ import { Login } from './components/Login.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login />
+    /* element: <Login /> */
+    element: <UsuarioForm />
   },
   {
     path: "/login",
@@ -53,10 +56,15 @@ const router = createBrowserRouter([
 ]);
 
 
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
+//     {/* <NavBar />
+//     <RouterProvider router={router} />
+//     <Footer /> */}
+//     <ApiCep />
+//   </React.StrictMode>,
+// )
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <NavBar />
-    <RouterProvider router={router} />
-    <Footer />
-  </React.StrictMode>,
+  <ApiCep />,
 )
